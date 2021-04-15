@@ -1,0 +1,17 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "testataan nodee",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "author": "Diyar",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
