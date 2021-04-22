@@ -1,6 +1,6 @@
 'use strict';
 const cats = [
-  {
+  { // array which has objects inside
     id: '1',
     name: 'Frank',
     age: '6',
