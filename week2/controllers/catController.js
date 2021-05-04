@@ -26,12 +26,16 @@ const cat_get_by_id = (req, res) => {
   res.json(cats.find(cat => cat.id === req.params.id));
 };
 
-const cat_post_new_cat = (req, res) => {
+const cat_post_new_cat = async (req, res) => {
   console.log('post cat', req.body);
-  res.send(`post cat: ${req.body.name}`);
+  const cat = req.body;
+  const catid = await catModel.insertCat(cat);
+  cat.id = catid;
+  //res.send(`post cat: ${req.body.name}`);
+  res.json(cat);
 };
 
-module.exports = {
+module.exports = { // export methods
   cat_list_get,
   cat_get_by_id,
   cat_post_new_cat,
